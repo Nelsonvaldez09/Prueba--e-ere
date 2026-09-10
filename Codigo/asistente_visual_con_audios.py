@@ -14,9 +14,12 @@ from audio_player import AudioNotifier
 # CONFIGURACIÓN
 # --------------------------------------------------------------------------
 IDIOMA = "es"                 # "es" | "en" | "gn"  -> podés cambiarlo en caliente con las teclas 1/2/3
-COOLDOWN_AUDIO = 3.0           # segundos entre anuncios de un mismo tercio
-DEPTH_EVERY_N_FRAMES = 2       # MiDaS es el modelo más pesado, no hace falta correrlo cada frame
-RESIZE_WIDTH = 480             # bajar resolución acelera bastante en CPU
+COOLDOWN_AUDIO = 2.5            # segundos entre anuncios (ahora es UN cooldown global, no por tercio)
+DEPTH_EVERY_N_FRAMES = 2        # MiDaS es el modelo más pesado, no hace falta correrlo cada frame
+RESIZE_WIDTH = 640              # 480 recortaba demasiado detalle para reconocer sillas/mesas/bancos.
+                                 # Si tu PC no tiene GPU y se pone muy lento, bajalo a 480 o 416.
+CONF_YOLO = 0.25                # confianza mínima para aceptar una detección (0.0 a 1.0).
+                                 # Si sigue sin reconocer objetos, bajalo a 0.15-0.20 (aumenta falsos positivos).
 UMBRAL_CERCA = 1.2
 UMBRAL_MEDIA = 2.5
 
@@ -93,7 +96,7 @@ def distancia_a_bucket(dist_m):
         return "far", "LEJOS", (0, 255, 0)
 
 
-ultimos_audio_time = {"left": 0.0, "front": 0.0, "right": 0.0}
+ultimo_audio_time = 0.0  # cooldown GLOBAL: solo se anuncia una cosa a la vez, la más cercana
 frame_idx = 0
 depth_map = None
 
@@ -123,9 +126,10 @@ try:
             depth_map = estimar_profundidad(frame_proc)
         frame_idx += 1
 
-        results = model_yolo(frame_proc, stream=True, verbose=False, classes=[
-            i for i, n in model_yolo.names.items() if n in CLASES_YOLO
-        ])
+        results = model_yolo(
+            frame_proc, stream=True, verbose=False, conf=CONF_YOLO,
+            classes=[i for i, n in model_yolo.names.items() if n in CLASES_YOLO],
+        )
 
         # candidatos por tercio: {"left": (dist, clave, estado, color) o None, ...}
         candidatos = {"left": None, "front": None, "right": None}
@@ -188,17 +192,22 @@ try:
             if bucket in ("close", "media"):
                 candidatos[pos] = (dist_m, "obstacle", bucket, estado)
 
+        # MODO PRIORIDAD: juntamos todo lo detectado en los 3 tercios y nos
+        # quedamos únicamente con el más cercano para anunciar primero.
+        alertas_validas = [
+            (dist_m, pos, clave, bucket, estado)
+            for pos, cand in candidatos.items()
+            if cand is not None
+            for dist_m, clave, bucket, estado in [cand]
+            if bucket in ("close", "media")
+        ]
+
         tiempo_actual = time.time()
-        for pos, cand in candidatos.items():
-            if cand is None:
-                continue
-            dist_m, clave, bucket, estado = cand
-            if bucket not in ("close", "media"):
-                continue
-            if tiempo_actual - ultimos_audio_time[pos] <= COOLDOWN_AUDIO:
-                continue
+        if alertas_validas and (tiempo_actual - ultimo_audio_time > COOLDOWN_AUDIO):
+            alertas_validas.sort(key=lambda a: a[0])  # más cerca primero
+            dist_m, pos, clave, bucket, estado = alertas_validas[0]
             notifier.play_warning(obj_class=clave, position=pos, distance=bucket, lang=IDIOMA)
-            ultimos_audio_time[pos] = tiempo_actual
+            ultimo_audio_time = tiempo_actual
 
         cv2.line(frame_proc, (tercio, 0), (tercio, alto), (255, 255, 255), 1)
         cv2.line(frame_proc, (tercio * 2, 0), (tercio * 2, alto), (255, 255, 255), 1)
