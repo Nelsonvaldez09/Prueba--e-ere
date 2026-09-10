@@ -1,0 +1,373 @@
+{
+  "person": {
+    "left": {
+      "close": {
+        "es": "persona_izq_cerca.wav",
+        "gn": "ava_izq_cerca.wav",
+        "en": "person_left_close.wav"
+      },
+      "media": {
+        "es": "persona_izq_media.wav",
+        "gn": "ava_izq_media.wav",
+        "en": "person_left_media.wav"
+      },
+      "far": {
+        "es": "persona_izq_lejos.wav",
+        "gn": "ava_izq_lejos.wav",
+        "en": "person_left_far.wav"
+      }
+    },
+    "front": {
+      "close": {
+        "es": "persona_frente_cerca.wav",
+        "gn": "ava_frente_cerca.wav",
+        "en": "person_front_close.wav"
+      },
+      "media": {
+        "es": "persona_frente_media.wav",
+        "gn": "ava_frente_media.wav",
+        "en": "person_front_media.wav"
+      },
+      "far": {
+        "es": "persona_frente_lejos.wav",
+        "gn": "ava_frente_lejos.wav",
+        "en": "person_front_far.wav"
+      }
+    },
+    "right": {
+      "close": {
+        "es": "persona_der_cerca.wav",
+        "gn": "ava_der_cerca.wav",
+        "en": "person_right_close.wav"
+      },
+      "media": {
+        "es": "persona_der_media.wav",
+        "gn": "ava_der_media.wav",
+        "en": "person_right_media.wav"
+      },
+      "far": {
+        "es": "persona_der_lejos.wav",
+        "gn": "ava_der_lejos.wav",
+        "en": "person_right_far.wav"
+      }
+    }
+  },
+  "chair": {
+    "left": {
+      "close": {
+        "es": "silla_izq_cerca.wav",
+        "gn": "apyka_izq_cerca.wav",
+        "en": "chair_left_close.wav"
+      },
+      "media": {
+        "es": "silla_izq_media.wav",
+        "gn": "apyka_izq_media.wav",
+        "en": "chair_left_media.wav"
+      },
+      "far": {
+        "es": "silla_izq_lejos.wav",
+        "gn": "apyka_izq_lejos.wav",
+        "en": "chair_left_far.wav"
+      }
+    },
+    "front": {
+      "close": {
+        "es": "silla_frente_cerca.wav",
+        "gn": "apyka_frente_cerca.wav",
+        "en": "chair_front_close.wav"
+      },
+      "media": {
+        "es": "silla_frente_media.wav",
+        "gn": "apyka_frente_media.wav",
+        "en": "chair_front_media.wav"
+      },
+      "far": {
+        "es": "silla_frente_lejos.wav",
+        "gn": "apyka_frente_lejos.wav",
+        "en": "chair_front_far.wav"
+      }
+    },
+    "right": {
+      "close": {
+        "es": "silla_der_cerca.wav",
+        "gn": "apyka_der_cerca.wav",
+        "en": "chair_right_close.wav"
+      },
+      "media": {
+        "es": "silla_der_media.wav",
+        "gn": "apyka_der_media.wav",
+        "en": "chair_right_media.wav"
+      },
+      "far": {
+        "es": "silla_der_lejos.wav",
+        "gn": "apyka_der_lejos.wav",
+        "en": "chair_right_far.wav"
+      }
+    }
+  },
+  "bench": {
+    "left": {
+      "close": {
+        "es": "banco_izq_cerca.wav",
+        "gn": "banco_izq_cerca.wav",
+        "en": "bench_left_close.wav"
+      },
+      "media": {
+        "es": "banco_izq_media.wav",
+        "gn": "banco_izq_media.wav",
+        "en": "bench_left_media.wav"
+      },
+      "far": {
+        "es": "banco_izq_lejos.wav",
+        "gn": "banco_izq_lejos.wav",
+        "en": "bench_left_far.wav"
+      }
+    },
+    "front": {
+      "close": {
+        "es": "banco_frente_cerca.wav",
+        "gn": "banco_frente_cerca.wav",
+        "en": "bench_front_close.wav"
+      },
+      "media": {
+        "es": "banco_frente_media.wav",
+        "gn": "banco_frente_media.wav",
+        "en": "bench_front_media.wav"
+      },
+      "far": {
+        "es": "banco_frente_lejos.wav",
+        "gn": "banco_frente_lejos.wav",
+        "en": "bench_front_far.wav"
+      }
+    },
+    "right": {
+      "close": {
+        "es": "banco_der_cerca.wav",
+        "gn": "banco_der_cerca.wav",
+        "en": "bench_right_close.wav"
+      },
+      "media": {
+        "es": "banco_der_media.wav",
+        "gn": "banco_der_media.wav",
+        "en": "bench_right_media.wav"
+      },
+      "far": {
+        "es": "banco_der_lejos.wav",
+        "gn": "banco_der_lejos.wav",
+        "en": "bench_right_far.wav"
+      }
+    }
+  },
+  "table": {
+    "left": {
+      "close": {
+        "es": "mesa_izq_cerca.wav",
+        "gn": "mesa_izq_cerca.wav",
+        "en": "table_left_close.wav"
+      },
+      "media": {
+        "es": "mesa_izq_media.wav",
+        "gn": "mesa_izq_media.wav",
+        "en": "table_left_media.wav"
+      },
+      "far": {
+        "es": "mesa_izq_lejos.wav",
+        "gn": "mesa_izq_lejos.wav",
+        "en": "table_left_far.wav"
+      }
+    },
+    "front": {
+      "close": {
+        "es": "mesa_frente_cerca.wav",
+        "gn": "mesa_frente_cerca.wav",
+        "en": "table_front_close.wav"
+      },
+      "media": {
+        "es": "mesa_frente_media.wav",
+        "gn": "mesa_frente_media.wav",
+        "en": "table_front_media.wav"
+      },
+      "far": {
+        "es": "mesa_frente_lejos.wav",
+        "gn": "mesa_frente_lejos.wav",
+        "en": "table_front_far.wav"
+      }
+    },
+    "right": {
+      "close": {
+        "es": "mesa_der_cerca.wav",
+        "gn": "mesa_der_cerca.wav",
+        "en": "table_right_close.wav"
+      },
+      "media": {
+        "es": "mesa_der_media.wav",
+        "gn": "mesa_der_media.wav",
+        "en": "table_right_media.wav"
+      },
+      "far": {
+        "es": "mesa_der_lejos.wav",
+        "gn": "mesa_der_lejos.wav",
+        "en": "table_right_far.wav"
+      }
+    }
+  },
+  "door": {
+    "left": {
+      "close": {
+        "es": "puerta_izq_cerca.wav",
+        "gn": "oke_izq_cerca.wav",
+        "en": "door_left_close.wav"
+      },
+      "media": {
+        "es": "puerta_izq_media.wav",
+        "gn": "oke_izq_media.wav",
+        "en": "door_left_media.wav"
+      },
+      "far": {
+        "es": "puerta_izq_lejos.wav",
+        "gn": "oke_izq_lejos.wav",
+        "en": "door_left_far.wav"
+      }
+    },
+    "front": {
+      "close": {
+        "es": "puerta_frente_cerca.wav",
+        "gn": "oke_frente_cerca.wav",
+        "en": "door_front_close.wav"
+      },
+      "media": {
+        "es": "puerta_frente_media.wav",
+        "gn": "oke_frente_media.wav",
+        "en": "door_front_media.wav"
+      },
+      "far": {
+        "es": "puerta_frente_lejos.wav",
+        "gn": "oke_frente_lejos.wav",
+        "en": "door_front_far.wav"
+      }
+    },
+    "right": {
+      "close": {
+        "es": "puerta_der_cerca.wav",
+        "gn": "oke_der_cerca.wav",
+        "en": "door_right_close.wav"
+      },
+      "media": {
+        "es": "puerta_der_media.wav",
+        "gn": "oke_der_media.wav",
+        "en": "door_right_media.wav"
+      },
+      "far": {
+        "es": "puerta_der_lejos.wav",
+        "gn": "oke_der_lejos.wav",
+        "en": "door_right_far.wav"
+      }
+    }
+  },
+  "stairs": {
+    "left": {
+      "close": {
+        "es": "escalera_izq_cerca.wav",
+        "gn": "escalera_izq_cerca.wav",
+        "en": "stairs_left_close.wav"
+      },
+      "media": {
+        "es": "escalera_izq_media.wav",
+        "gn": "escalera_izq_media.wav",
+        "en": "stairs_left_media.wav"
+      },
+      "far": {
+        "es": "escalera_izq_lejos.wav",
+        "gn": "escalera_izq_lejos.wav",
+        "en": "stairs_left_far.wav"
+      }
+    },
+    "front": {
+      "close": {
+        "es": "escalera_frente_cerca.wav",
+        "gn": "escalera_frente_cerca.wav",
+        "en": "stairs_front_close.wav"
+      },
+      "media": {
+        "es": "escalera_frente_media.wav",
+        "gn": "escalera_frente_media.wav",
+        "en": "stairs_front_media.wav"
+      },
+      "far": {
+        "es": "escalera_frente_lejos.wav",
+        "gn": "escalera_frente_lejos.wav",
+        "en": "stairs_front_far.wav"
+      }
+    },
+    "right": {
+      "close": {
+        "es": "escalera_der_cerca.wav",
+        "gn": "escalera_der_cerca.wav",
+        "en": "stairs_right_close.wav"
+      },
+      "media": {
+        "es": "escalera_der_media.wav",
+        "gn": "escalera_der_media.wav",
+        "en": "stairs_right_media.wav"
+      },
+      "far": {
+        "es": "escalera_der_lejos.wav",
+        "gn": "escalera_der_lejos.wav",
+        "en": "stairs_right_far.wav"
+      }
+    }
+  },
+  "obstacle": {
+    "left": {
+      "close": {
+        "es": "obstaculo_izq_cerca.wav",
+        "gn": "obstaculo_izq_cerca.wav",
+        "en": "obstacle_left_close.wav"
+      },
+      "media": {
+        "es": "obstaculo_izq_media.wav",
+        "gn": "obstaculo_izq_media.wav",
+        "en": "obstacle_left_media.wav"
+      },
+      "far": {
+        "es": "obstaculo_izq_lejos.wav",
+        "gn": "obstaculo_izq_lejos.wav",
+        "en": "obstacle_left_far.wav"
+      }
+    },
+    "front": {
+      "close": {
+        "es": "obstaculo_frente_cerca.wav",
+        "gn": "obstaculo_frente_cerca.wav",
+        "en": "obstacle_front_close.wav"
+      },
+      "media": {
+        "es": "obstaculo_frente_media.wav",
+        "gn": "obstaculo_frente_media.wav",
+        "en": "obstacle_front_media.wav"
+      },
+      "far": {
+        "es": "obstaculo_frente_lejos.wav",
+        "gn": "obstaculo_frente_lejos.wav",
+        "en": "obstacle_front_far.wav"
+      }
+    },
+    "right": {
+      "close": {
+        "es": "obstaculo_der_cerca.wav",
+        "gn": "obstaculo_der_cerca.wav",
+        "en": "obstacle_right_close.wav"
+      },
+      "media": {
+        "es": "obstaculo_der_media.wav",
+        "gn": "obstaculo_der_media.wav",
+        "en": "obstacle_right_media.wav"
+      },
+      "far": {
+        "es": "obstaculo_der_lejos.wav",
+        "gn": "obstaculo_der_lejos.wav",
+        "en": "obstacle_right_far.wav"
+      }
+    }
+  }
+}
